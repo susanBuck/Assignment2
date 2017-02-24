@@ -10,8 +10,8 @@ class Calculate{
   $value=$form->get('value','');
   $rent=$form->get('rent','');
   $months = $form->isChosen('month','');
-  $otherincome = $form->isChosen('otherincome','');
-  $expense = $form->isChosen('$expense','');
+  $otherincome = $form->get('otherincome','');
+  $expense = $form->get('$expense','');
 
     if($form->isSubmitted()){
       public function__calculate($value,$rent,$months,$otherincome,$expense)
