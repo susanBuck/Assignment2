@@ -46,7 +46,7 @@
         placeholder='Other Income (Annual)' value='<?php echo $otherincome;?>'>
         <input type='number' name='expense' class='form-control'
         placeholder='Operating Expenses (Annual)' value='<?php echo $expense;?>'>
-        <h5>Round up?&nbsp&nbsp<input type='checkbox' id='RoundNumbers'></h5>
+        <h5>Please make sure to include all expenses and other income occurred this year related to this property.<input type='checkbox' id='RoundNumbers'></h5>
 
         <button class='btn btn-lg btn-success' type='submit'> Calculate </button>
         <!--If error happens-->
