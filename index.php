@@ -1,6 +1,6 @@
 <?php
 require('Calculate.php');
- ?>
+?>
 
 <!DOCTYPE html>
 <html>
