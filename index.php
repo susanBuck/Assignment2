@@ -19,7 +19,7 @@
     based on the value of the property and the net operating income (NOI)
     of the year.</p>
 
-    <form method='GET' action='/'>
+    <form method='GET' action='index.php'>
       <div class='form-group'>
         <label for='title'>Please input the following details:</label>
         <input type='number' name='value' required class='form-control'
