@@ -54,9 +54,10 @@
           <?php foreach($errors as $error):?>
             <?=$errors?><br>
           <?php endforeach;?>
+        </div>
+        <?php endif;?>
       </div>
-      <?php endif;?>
     </form>
-
+   
 </body>
 </html>
