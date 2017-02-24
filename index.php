@@ -18,8 +18,8 @@
   <p>This webpage will help the client to calculate the capitalization rate
     based on the value of the property and the net operating income (NOI)
     of the year.</p>
-
-    <form method='GET' action='index.php'>
+    <!--Building the form-->
+    <form method='get' action='index.php'>
       <div class='form-group'>
         <label for='title'>Please input the following details:</label>
         <input type='number' name='value' required class='form-control'
@@ -49,7 +49,7 @@
         <h5>Round up?&nbsp&nbsp<input type='checkbox' id='RoundNumbers'></h5>
 
         <button class='btn btn-lg btn-success' type='submit'> Calculate </button>
-
+        <!--If error happens-->
         <div class='alert alert-danger'>
           <?php foreach($errors as $error):?>
             <?=$errors?><br>
