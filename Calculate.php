@@ -13,11 +13,12 @@ class Calculate{
   $otherincome = $form->isChosen('otherincome','');
   $expense = $form->isChosen('$expense','');
 
-  if($form->isSubmitted()){
-    public function__calculate($value,$rent,$months,$otherincome,$expense)
-    {
-      $caprate=(($rent*$months+$otherincome)-$expense)/$value;
-      echo 'The CapRate for this property is: $caprate';
+    if($form->isSubmitted()){
+      public function__calculate($value,$rent,$months,$otherincome,$expense)
+      {
+        $caprate=(($rent*$months+$otherincome)-$expense)/$value;
+        echo 'The CapRate for this property is: $caprate';
+      }
     }
   }
 ?>#end of class
