@@ -1,6 +1,4 @@
-<?php
-require('Calculate.php');
-?>
+<?php require('Calculate.php'); ?>
 
 <!DOCTYPE html>
 <html>
@@ -21,14 +19,15 @@ require('Calculate.php');
     based on the value of the property and the net operating income (NOI)
     of the year.</p>
 
-    <form method='GET' action='index.php'>
+    <form method='GET' action='/'>
       <div class='form-group'>
         <label for='title'>Please input the following details:</label>
-        <input type='number' id='value' required class='form-control'
+        <input type='number' name='value' required class='form-control'
         placeholder='Value of your Property (Numeric Value Only)' value='<?php echo $value;?>'>
-        <input type='number' id='rent' name='rent' class='form-control' placeholder='Monthly Rent (Numeric Value Only)'>
+        <input type='number' name='rent' class='form-control'
+        placeholder='Monthly Rent (Numeric Value Only)' value='<?php echo $rent;?>'>
         <label for='months'>The number of months rent was collected:</label>
-        <select id='numberofmonth' name='rent' class='form-control'>
+        <select name='months' class='form-control' value='<?php echo $months;?>'>
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -43,12 +42,20 @@ require('Calculate.php');
           <option>12</option>
         </select>
         <label for='others'>Other Income or expenses</label>
-        <input type='number' id='otherincome' class='form-control' placeholder='Other Income (Annual)'>
-        <input type='number' id='expense' class='form-control' placeholder='Operating Expenses (Annual)'>
+        <input type='number' name='otherincome' class='form-control'
+        placeholder='Other Income (Annual)' value='<?php echo $otherincome;?>'>
+        <input type='number' name='expense' class='form-control'
+        placeholder='Operating Expenses (Annual)' value='<?php echo $expense;?>'>
         <h5>Round up?&nbsp&nbsp<input type='checkbox' id='RoundNumbers'></h5>
 
         <button class='btn btn-lg btn-success' type='submit'> Calculate </button>
+
+        <div class='alert alert-danger'>
+          <?php foreach($errors as $error):?>
+            <?=$errors?><br>
+          <?php endforeach;?>
       </div>
+      <?php endif;?>
     </form>
 
 </body>
