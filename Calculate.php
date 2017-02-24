@@ -3,7 +3,7 @@
 require('Form.php');
 
 use Assignment2\Form;
-$form = new Form($GET);
+$form = new Form($_GET);
 
 #values
 class Calculate{
